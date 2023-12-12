@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>702</width>
+    <height>517</height>
+   </rect>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>-1</y>
+      <width>691</width>
+      <height>491</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="hLayout">
+     <property name="topMargin">
+      <number>10</number>
+     </property>
+     <property name="rightMargin">
+      <number>10</number>
+     </property>
+     <item>
+      <widget class="QWidget" name="widget" native="true">
+       <property name="minimumSize">
+        <size>
+         <width>220</width>
+         <height>0</height>
+        </size>
+       </property>
+       <widget class="QComboBox" name="combo_lowBaud">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>80</y>
+          <width>111</width>
+          <height>28</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>80</y>
+          <width>81</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>最低波特率：</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_selectFile">
+        <property name="geometry">
+         <rect>
+          <x>11</x>
+          <y>230</y>
+          <width>91</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>选择文件</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_flush">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>40</y>
+          <width>41</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>刷新</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_6">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>120</y>
+          <width>81</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>最高波特率：</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="check_reaseEEPROM">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>160</y>
+          <width>201</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>下次下载擦除EEPROM(仅支持
+STC12系列及以前的MCU)</string>
+        </property>
+       </widget>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>370</y>
+          <width>201</width>
+          <height>111</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>发送设置</string>
+        </property>
+        <widget class="QRadioButton" name="radio_sendAscii">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>30</y>
+           <width>81</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>ASCII</string>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="radio_sendHex">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>50</y>
+           <width>81</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>HEX</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btn_clearSend">
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>40</y>
+           <width>80</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>清空发送区</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="check_autoSend">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>80</y>
+           <width>81</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>定时发送</string>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="spin_interval">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>80</y>
+           <width>51</width>
+           <height>29</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>99999</number>
+         </property>
+         <property name="value">
+          <number>100</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_7">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>80</y>
+           <width>41</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string> 毫秒</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QComboBox" name="combo_models">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>0</y>
+          <width>111</width>
+          <height>28</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_detect">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>0</y>
+          <width>41</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>检测</string>
+        </property>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>280</y>
+          <width>201</width>
+          <height>81</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>接收设置</string>
+        </property>
+        <widget class="QRadioButton" name="radio_recieveAscii">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>30</y>
+           <width>81</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>ASCII</string>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="radio_recieveHex">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>50</y>
+           <width>81</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>HEX</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btn_clearRecieve">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>40</y>
+           <width>80</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>清空接收区</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QComboBox" name="combo_highBaud">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>120</y>
+          <width>111</width>
+          <height>28</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_download">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>230</y>
+          <width>91</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>下载</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_3">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>0</y>
+          <width>41</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>芯片:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>40</y>
+          <width>41</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>端口:</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="combo_downloadPorts">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>40</y>
+          <width>111</width>
+          <height>28</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTabWidget" name="tabWidget">
+       <property name="currentIndex">
+        <number>1</number>
+       </property>
+       <widget class="QWidget" name="tab_download">
+        <attribute name="title">
+         <string>下载输出</string>
+        </attribute>
+        <widget class="QWidget" name="verticalLayoutWidget_2">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>50</y>
+           <width>211</width>
+           <height>161</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="tabDownloadLayout">
+          <property name="leftMargin">
+           <number>10</number>
+          </property>
+          <property name="topMargin">
+           <number>10</number>
+          </property>
+          <property name="rightMargin">
+           <number>10</number>
+          </property>
+          <property name="bottomMargin">
+           <number>10</number>
+          </property>
+          <item>
+           <widget class="QPlainTextEdit" name="outputText">
+            <property name="lineWrapMode">
+             <enum>QPlainTextEdit::NoWrap</enum>
+            </property>
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="tab_helper">
+        <attribute name="title">
+         <string>串口助手</string>
+        </attribute>
+        <widget class="QWidget" name="verticalLayoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>431</width>
+           <height>331</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="helperTabLayout">
+          <property name="leftMargin">
+           <number>10</number>
+          </property>
+          <property name="topMargin">
+           <number>10</number>
+          </property>
+          <property name="rightMargin">
+           <number>10</number>
+          </property>
+          <item>
+           <widget class="QPlainTextEdit" name="recievedText">
+            <property name="font">
+             <font>
+              <family>Noto Sans Mono</family>
+             </font>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPlainTextEdit" name="sendText">
+            <property name="font">
+             <font>
+              <family>Noto Sans Mono</family>
+             </font>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="widget_2" native="true">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>80</height>
+             </size>
+            </property>
+            <widget class="QComboBox" name="combo_helperPorts">
+             <property name="geometry">
+              <rect>
+               <x>140</x>
+               <y>10</y>
+               <width>131</width>
+               <height>28</height>
+              </rect>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="btn_send">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>10</y>
+               <width>71</width>
+               <height>28</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>发送</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_5">
+             <property name="geometry">
+              <rect>
+               <x>100</x>
+               <y>10</y>
+               <width>41</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>端口:</string>
+             </property>
+            </widget>
+            <widget class="QComboBox" name="combo_helperBaud">
+             <property name="geometry">
+              <rect>
+               <x>350</x>
+               <y>10</y>
+               <width>91</width>
+               <height>28</height>
+              </rect>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_4">
+             <property name="geometry">
+              <rect>
+               <x>300</x>
+               <y>10</y>
+               <width>51</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>波特率：</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_8">
+             <property name="geometry">
+              <rect>
+               <x>300</x>
+               <y>40</y>
+               <width>51</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>停止位:</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_9">
+             <property name="geometry">
+              <rect>
+               <x>100</x>
+               <y>40</y>
+               <width>41</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>数据:</string>
+             </property>
+            </widget>
+            <widget class="QComboBox" name="combo_dataBits">
+             <property name="geometry">
+              <rect>
+               <x>140</x>
+               <y>40</y>
+               <width>51</width>
+               <height>28</height>
+              </rect>
+             </property>
+             <item>
+              <property name="text">
+               <string>5位</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>6位</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>7位</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>8位</string>
+              </property>
+             </item>
+            </widget>
+            <widget class="QPushButton" name="btn_openOrClose">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>40</y>
+               <width>71</width>
+               <height>28</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>打开串口</string>
+             </property>
+            </widget>
+            <widget class="QComboBox" name="combo_stopBits">
+             <property name="geometry">
+              <rect>
+               <x>350</x>
+               <y>40</y>
+               <width>91</width>
+               <height>28</height>
+              </rect>
+             </property>
+             <item>
+              <property name="text">
+               <string>1位</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>2位</string>
+              </property>
+             </item>
+            </widget>
+            <widget class="QComboBox" name="combo_parity">
+             <property name="geometry">
+              <rect>
+               <x>200</x>
+               <y>40</y>
+               <width>71</width>
+               <height>28</height>
+              </rect>
+             </property>
+             <item>
+              <property name="text">
+               <string>无校验</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>偶校验</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>奇校验</string>
+              </property>
+             </item>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

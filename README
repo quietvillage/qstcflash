@@ -1,0 +1,20 @@
+此程序是依据 stcflash 项目(https://github.com/sms-wyt/stcflash)，
+使用 Qt 改写的 GUI 版程序。
+在此，特别感谢原项目作者的分享。
+
+
+运行此程序需要安装 Qt 的串口二进制包(不同发行版包的名称可能不同)：
+qt5-qtserialport    //fedora
+libqt5serialport5   //debian
+编译则需要安装串口开发包：
+qt5-qtserialport-devel  //fedora
+libqt5serialport5-dev   //debian
+
+
+linux 访问硬件 IO 一般都要 root 权限，若程序提示没有权限，可采用以下两种办法之一：
+
+1、以 root 身份运行程序：
+sudo ./QSTCFlash & exit
+
+2、修改端口的访问权限：
+sudo chmod +666 /dev/ttyUSB0
